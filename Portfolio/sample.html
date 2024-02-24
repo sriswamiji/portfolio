@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    
+    color: #000000;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .name{
+    font-size:1.5rem ;
+
+  }
+  .name1{
+    font-size: 2rem;
+  }
+  #left {
+    float: left;
+    height:auto;
+}
+ #right {
+    float: right;
+    height:auto;
+}
+#profile{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color:black;
+    background-position: center;
+    border-color:black;
+}
+#social i{
+    padding: 5px;
+    color:white;
+    display: inline-flex;
+    justify-content:space-evenly;
+    float: center;
+    }
+#social i:hover{
+    background-color:black;
+    color:white;
+    border-radius: 20px;
+    }
+        
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #00203fff;
+    color: white;
+  }
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: larger;
+    float:left;
+    
+  }
+nav a:hover {
+    background-color: #ADEFD1FF;
+    color:#00203FFF;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: azure;
+  }
+   #left ,#b1  ,#b2 {
+    color: white;
+    background-color:#00203FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight:bold;
+    
+  }
+  #b2:hover{
+    background-color: #ADEFD1FF;
+    color:#00203FFF;
+  }
+  #b1:hover{
+    background-color:#ADEFD1FF;
+    color:#00203FFF;
+  }
+
+  section {
+    padding: 30px 0;
+    width: auto;
+    
+  }
+  section h2 {
+    text-align: center;
+  }
+
+  #about p{
+    float: left;
+    width:100%;
+  }
+  .h3{
+    font-style: italic;
+    text-align: center;
+    
+}
+.checked{
+    color: orange;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical ;
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #040ca7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: cornflowerblue;
+
+  }
+  
+  /* Add a background color and some padding around the form */
+  #contact .container {
+    border-radius: 5px;
+    background-color:#4ba4f2;
+    padding: 40px;
+    display:flex;
+    gap:10px;
+    color:white;
+  }
+  
+  .adress{
+    float:left;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    width:48%;
+
+  }
+  .form{
+    float: right;
+    height:auto;
+    width:50%;
+  }
+  .card {
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    height:auto;
+  }
+  
+  .card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #666;
+    font-size: 16px;
+  }
+  .card  #calc{
+
+    max-width: 300px;
+    height:auto;
+    display: flex;
+  }
+  .card #train{
+    max-width: 300px;
+    height:auto;
+    display: flex;
+  }
+
+  
+  .card a {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
+  footer {
+    background-color:#00203fff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav a {
+      margin: 5px;
+    }
+    #home{
+        padding-top: none;
+    
+      }
+  }
+
+</style>
+</head>
+
+<body>
+
+<header class="nav-container">
+    <nav >
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#"></a>
+      </nav>
+  
+</header>
+
+<div class="container">
+    
+<section id="home">
+    <aside id="right">
+        <img src="naniphoto.jpeg" alt=""  id="profile">
+      </aside>
+      <aside class="left">
+        <h1 class="name"> Hi I'm 
+            <span class="name1">Sri Swamiji</span>
+            &nbsp;<br/><br/>
+            <span class="name1">Frontend Developer</span> 
+            <br/>
+          </h1>
+            <p>
+             Passionate frontend developer dedicated to creating seamless
+             and visually appealing user experiences. Proficient in HTML,CSS 
+             and Javascript,with a keen eye for design and a commitment to 
+             staying current with emerging web technologies.
+            </p>
+           <a href="#contact" id="b1">HIRE ME</a> &nbsp;
+           <a href="nani.pdf" id="b2">LOOK ON CV</a>
+        </aside>
+</section>
+<section id="about">
+  <h2><i class="fa fa-user" id=""></i>&nbsp;About Me</h2>
+  <p>Welcome to the my about page .This is Nellore Sri Swamiji!
+
+     a budding frontend developer with a passion for creating engaging and user-friendly digital experiences. Armed with a Bachelor's degree in Engineering, I embarked on my journey into the world of web development, eager to learn and grow alongside the ever-evolving landscape of technology.
+    
+    With a keen eye for detail and a knack for problem-solving, I thrive in the fast-paced environment of frontend development. Whether it's crafting pixel-perfect designs or diving into complex coding challenges, I approach each task with enthusiasm and dedication.
+
+    
+    Continuous learning is at the core of my professional philosophy. As the world of technology continues to advance, I am committed to staying updated with the latest trends and techniques in frontend development. From mastering new programming languages to exploring innovative design principles, I embrace every opportunity to expand my skill set and elevate my craft.
+    
+    But technical proficiency is just one aspect of who I am. With strong communication skills and a knack for collaboration,
+    Feel free to reach out with any questions or inquiries. I'm always eager to connect and explore new opportunities in the world of frontend development.
+    
+    
+    
+    
+    </p>
+  <div class="skils"> <h3>SKILL SET</h3>
+    <li> HTML5
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+</li><br/>
+<li> CSS
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+  </li><br/>
+  <li> JAVASCRIPT
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+  </li><br/>
+  <li> REACT JS
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+  </li>
+</div>
+</section>
+
+<section id="projects">
+  <h2><i class="fas fa-project"></i>Projects</h2>
+  <div class="card">
+    <h2></h2>
+    <img src="calc.png"  alt="calc" id="calc">
+    <p>A calculator is a machine which allows people to do math operations more easily. For example,
+     most calculators will add, subtract, multiply, and divide.</p>
+    <a href="nanicalculator.html">DEMO</a>
+  </div>
+  <div class="card">
+    <h2>TRAIN BOOKING SYSTEM</h2>
+    <p>Its a static website</p>
+    <img src=" train.png" alt="train" id="train">
+
+    <p>A Booking system where a traveler reserves his seat before traveling. This facility has many windows and categories,
+         which provides an ease to passengers. By giving a few details and some payment, a traveler can choose among their
+          favorite coaches between General, Sleeper, or AC coaches</p>
+    <a href="train.html"> DEMO</a>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2><i class="fa fa-send" id=""></i> &nbsp;Contact Me</h2>
+  
+  <div class="container">
+    
+    <div class =" adress">
+
+       <p><span><i class="fa fa-home" id=""></i>&nbsp;</span> : Allur Purini Nellore dist,
+       Andhra Pradesh, India.  
+       </p>
+      <p><span>&#9990;&nbsp;</span>contact : +918688735070   </p>
+      <p><span>&#9993;&nbsp;</span>Mail id : sriswamiji.scsvmv@gmail.com   </p>
+      <div id="social">
+        <a href="#"> <i class="fa fa-facebook" id="fb"></i></a>
+        <a href="#"> <i class="fa fa-instagram" id="in"></i></a>
+        <a href="#">  <i class="fa fa-twitter" id="tw"></i></a>
+        <a href="#">  <i class="fa fa-youtube" id="yu"></i></a>
+        <a href="#" ><i class="fa fa-linkedin"   id="ln"></i></a>
+      </div>    
+    </div>
+
+    <div class="form">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="lname">Mail Id</label>
+      <input type="text" id="mail" name="mail" placeholder="example@gmail.com..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="usa">INDIA</option>
+        <option value="usa">AMERICA</option>
+        <option value="usa">SOUTH AFRICA</option>
+        <option value="usa">PAKISTAN</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+</div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2024 My Portfolio MR SRI SWAMIJI
+</footer>
+
+<script>
+  // JavaScript for smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });
+</script>
+
+</body>
+</html>

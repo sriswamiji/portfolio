@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport"  content="width=device-width, initial-scale=1.0">
+<style type="text/css" >
+  body{
+    height:auto;
+    max-width :1200px;
+    justify-content: center;
+    display: flex;
+    }
+  .calc{
+    justify-content: center;
+  }
+table{
+     background-color:lightblue;
+     border:3px solidblack;
+     width:290px;
+}
+  h3{
+      font-size:40px;
+     background-color:black;
+     color:white;
+     text-align:center;
+     width:290px;
+     
+}
+.screen{ 
+       width:device-width;
+       height:50px;
+     border:1px lightblack;
+     padding:10px;
+}
+#inp{
+     height:40px;
+     width:220px;
+     color: black
+     
+}
+.clear{
+     height:45px;
+     width:50px;
+     
+}
+.clear:hover {
+ background-color: orange;;
+}
+.table{
+     padding:0px;
+     text-align:center;
+     }
+.button{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.equal{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  width:99px;
+  
+}
+
+.equal:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.equal:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.equal:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+} 
+   .equal:hover{
+         background-color:rgb(25, 179, 251);
+   }
+.button:hover{
+  background-color:orange;
+}
+.equal:hover{
+  background-color: orange;
+}
+
+</style>
+<title> calculator</title>
+
+<script>
+function cal(val){
+     document.getElementById("inp").value+=val;
+          
+}
+function calculate(){
+    var data= document.getElementById("inp").value;
+     let answer=eval(data);
+     document.getElementById("inp").value=answer;
+}
+
+function backspace()
+{
+     let data=document.getElementById("inp").value;
+     let newdata=data.substring(0,data.length-1);
+     document.getElementById("inp").value=newdata;
+}
+function clearAll()
+{
+     document.getElementById("inp").value="";
+}
+
+</script>
+<body>
+<div class="calc">
+  <h3> Calculator</h3>
+<div class="screen">
+<input readonly id="inp" type="text" placeholder="Enter value"> 
+<i class="fas fa-i-cursor    "></i>
+<button class="clear" onclick="clearAll()">AC</button>
+</div>
+<br>
+<div>
+<table class="table">
+<tr>
+<td><button class="button" onclick="cal(1)">1</button></td>
+<td><button class="button" onclick="cal(2)">2</button></td>
+<td><button class="button" onclick="cal(3)">3</button></td>
+<td><button class="button" onclick="cal(4)">4</button></td>
+<td><button class="button" onclick="cal(5)">5</button></td>
+</tr>
+<tr>
+<td><button class="button" onclick="cal(6)">6</button></td>
+<td><button class="button" onclick="cal(7)">7</button></td>
+<td><button class="button" onclick="cal(8)">8</button></td>
+<td><button class="button" onclick="cal(9)">9</button></td>
+<td><button class="button" onclick="cal(0)">0</button></td>
+</tr>
+<tr>
+<td><button class="button" onclick="cal('+')">+</button></td>
+<td><button class="button" onclick="cal('-')"> - </button></td>
+<td><button class="button" onclick="cal('*')">*</button></td>
+<td><button class="button" onclick="cal('/')">/</button></td>
+<td><button class="button" onclick="cal('%')">%</button></td>
+</tr>
+<tr>
+<td><button class="button" onclick="cal('.')"> . </button></td>
+<td><button class="button" onclick="cal('00')"> 00 </button></td>
+<td><button class="button" onclick="backspace()">c</button>
+<td colspan="2"><button class="equal"   onclick="calculate()"> = </button></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
